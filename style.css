@@ -1,0 +1,282 @@
+
+
+body{
+    margin:0;
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:#0F172A;
+
+    color:#E2E8F0;
+
+    line-height:1.7;
+
+}
+
+li{
+    list-style-type: none;
+    margin-left: 3%;
+}
+
+.list2 {
+margin-left: 8%;
+list-style-type: square;
+}
+.list3 {
+margin-left: 9%;
+list-style-type: none;
+}
+
+section{
+
+    background:#1E293B;
+
+    margin:40px auto;
+
+    max-width:1200px;
+
+    padding:40px;
+
+    border-radius:16px;
+
+    box-shadow:0 6px 20px rgba(0,0,0,.35);
+
+}
+a{
+
+    color:#60A5FA;
+
+}
+
+a:hover{
+
+    color:#93C5FD;
+
+}
+.table-section{
+
+    margin:70px auto;
+    max-width:1400px;
+    padding:20px;
+
+}
+
+.table-section h2{
+
+    text-align:center;
+    margin-bottom:5px;
+    color:#0057b8;
+    font-size:2rem;
+
+}
+
+.table-section p{
+
+    text-align:center;
+    color:#94A3B8;
+    margin-bottom:30px;
+
+}
+
+.table-container{
+    transform: scale(0.8);
+    overflow-x:auto;
+
+}
+
+.irpf-table{
+
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 35px rgba(0,0,0,.42);
+
+}
+
+.irpf-table thead{
+
+    background:linear-gradient(90deg,#0057b8,#3B82F6);
+
+}
+
+.irpf-table th{
+
+    color:white;
+    padding:18px;
+    text-align:center;
+    font-size:14px;
+    letter-spacing:.5px;
+
+}
+
+.irpf-table td{
+
+    padding:18px;
+    border-bottom:1px solid #475569;
+    text-align:center;
+    min-width:140px;
+    transition:.25s;
+
+}
+
+.irpf-table tbody tr:nth-child(even){
+
+    background:#bababb;
+
+}
+
+.irpf-table tbody tr:hover{
+
+    background:#dfefff;
+
+}
+
+.irpf-table tbody td:first-child{
+
+    font-weight:bold;
+    color:#0057b8;
+    background:#edf5ff;
+
+}
+
+.irpf-table tbody tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+header{
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 60px;
+
+    background:#111827;
+
+    border-bottom:1px solid #374151;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.35);
+
+}
+
+.logo{
+
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #60A5FA;
+
+    letter-spacing: .5px;
+
+}
+
+nav{
+
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+
+}
+
+nav a{
+
+    text-decoration: none;
+    color: #D1D5DB;
+    font-weight: 600;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    transition: .25s;
+
+}
+
+nav a:hover{
+
+    background: #0057B8;
+    color: white;
+
+}
+
+nav a.active{
+
+    background: #0057B8;
+    color: white;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    header{
+
+        flex-direction: column;
+        gap: 15px;
+        padding:20px;
+
+    }
+
+    nav{
+
+        justify-content:center;
+
+    }
+
+}
+
+
+
+@media(max-width:900px){
+
+    .irpf-table{
+
+        font-size:14px;
+
+    }
+
+    .irpf-table th,
+    .irpf-table td{
+
+        padding:12px;
+
+    }
+
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+    align-items: center;
+}
+
+.guide-text {
+    grid-column: 1;
+}
+
+.guide-image {
+    grid-column: 2;
+    text-align: center;
+}
+
+.guide-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    cursor: zoom-in;
+    transition: transform 0.2s ease;
+}
+
+.guide-image img:hover {
+    transform: scale(1.02);
+}
