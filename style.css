@@ -240,14 +240,18 @@ nav a.active{
         border-radius: 12px;
     }
 
-    .guide-grid{
-        grid-template-columns: 1fr;
+    section .guide-grid{
+        display: flex;
+        flex-direction: column;
         gap: 2rem;
     }
 
-    .guide-text,
-    .guide-image{
-        grid-column: 1;
+    section .guide-grid .guide-text{
+        order: 1;
+    }
+
+    section .guide-grid .guide-image{
+        order: 2;
     }
 }
 
