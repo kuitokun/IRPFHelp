@@ -18,34 +18,36 @@
 </head>
 
 <body>
-
-
-
     <header>
-        <div class="logo">
-            Guía IRPF Uruguay
-        </div>
+    <div class="logo">
+        Guía IRPF Uruguay
+    </div>
 
-        <nav>
-            <a href="#tabla">Ejemplo comprobante de IRPF</a>
-            <a href="#antes">Antes de comenzar</a>
-            <a href="#pagina1">Ingreso a DGI</a>
-            <a href="#pagina2">Declaración jurada</a>
-            <a href="#pagina3">Hoja I</a>
-            <a href="#pagina4">Hoja II</a>
-            <a href="#pagina5">Hoja III</a>
-            <a href="#pagina6">Hoja IV</a>
-        </nav>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
+    <nav id="mainNav">
+        <a href="#tabla">Ejemplo comprobante de IRPF</a>
+        <a href="#antes">Antes de comenzar</a>
+        <a href="#pagina1">Ingreso a DGI</a>
+        <a href="#pagina2">Declaración jurada</a>
+        <a href="#pagina3">Hoja I</a>
+        <a href="#pagina4">Hoja II</a>
+        <a href="#pagina5">Hoja III</a>
+        <a href="#pagina6">Hoja IV</a>
+    </nav>
     </header>
 
     <section id= "tabla" class="table-section">
     <h2 style="color: antiquewhite;">Ejemplo de comprobante de IRPF Anual</h2>
-    <p style="color: antiquewhite; margin-bottom: -2%;" >
+    <p style="color: antiquewhite;">
         Esta tabla es solo un ejemplo del documento que debería la Empresa&nbsp;proveer, el nombrado en la sección  <a href="#antes">Antes de comenzar</a> , punto b.
     </p> 
 
-    <div class="table-container" >
+    <div class="table-container" style="transform: scale(0.9);">
         <table class="irpf-table">
 
             <thead>
@@ -524,7 +526,25 @@
     <!-- MODAL PARA IMÁGENES -->
     <!-- ========================= -->
 
+<script>
+  const burgerBtn = document.getElementById('burgerBtn');
+  const mainNav = document.getElementById('mainNav');
 
+  burgerBtn.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    burgerBtn.classList.toggle('open');
+    burgerBtn.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Cierra el menú al tocar un link (para que no quede tapando la pantalla)
+  document.querySelectorAll('#mainNav a').forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      burgerBtn.classList.remove('open');
+      burgerBtn.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
 
 </body>
 </html>
