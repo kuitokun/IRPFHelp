@@ -107,6 +107,55 @@ a:hover{
     border-bottom:none;
 }
 
+/* ===== TOOLTIP EN CELDAS DE VALORES ===== */
+
+.irpf-table td.valor-dato{
+    position: relative;
+    cursor: help;
+    color: black;
+    font-size: medium;
+}
+
+.irpf-table td.valor-dato .tooltip-texto{
+    visibility: hidden;
+    opacity: 0;
+
+    background:#111827;
+    color:#E2E8F0;
+    text-align:center;
+    border-radius:8px;
+    padding:8px 12px;
+    font-size:13px;
+    font-weight: normal;
+    white-space: nowrap;
+    box-shadow:0 6px 20px rgba(0,0,0,.35);
+
+    position:absolute;
+    bottom:115%;
+    left:50%;
+    transform:translateX(-50%);
+
+    transition: opacity .2s ease, visibility .2s ease;
+    z-index:20;
+}
+
+.irpf-table td.valor-dato .tooltip-texto::after{
+    content:"";
+    position:absolute;
+    top:100%;
+    left:50%;
+    transform:translateX(-50%);
+    border-width:6px;
+    border-style:solid;
+    border-color:#111827 transparent transparent transparent;
+}
+
+.irpf-table td.valor-dato:hover .tooltip-texto,
+.irpf-table td.valor-dato.activo .tooltip-texto{
+    visibility:visible;
+    opacity:1;
+}
+
 /* ===== HEADER ===== */
 
 header{
