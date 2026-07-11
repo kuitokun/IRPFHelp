@@ -119,6 +119,7 @@ a:hover{
 .irpf-table td.valor-dato .tooltip-texto{
     visibility: hidden;
     opacity: 0;
+    pointer-events: none;
 
     background:#111827;
     color:#E2E8F0;
@@ -130,13 +131,13 @@ a:hover{
     white-space: nowrap;
     box-shadow:0 6px 20px rgba(0,0,0,.35);
 
-    position:absolute;
-    bottom:115%;
-    left:50%;
-    transform:translateX(-50%);
+    position:fixed;
+    top:0;
+    left:0;
+    transform:translate(-50%, calc(-100% - 10px));
 
     transition: opacity .2s ease, visibility .2s ease;
-    z-index:20;
+    z-index:9999;
 }
 
 .irpf-table td.valor-dato .tooltip-texto::after{
@@ -150,7 +151,6 @@ a:hover{
     border-color:#111827 transparent transparent transparent;
 }
 
-.irpf-table td.valor-dato:hover .tooltip-texto,
 .irpf-table td.valor-dato.activo .tooltip-texto{
     visibility:visible;
     opacity:1;
@@ -371,6 +371,17 @@ nav a.active{
     transform: scale(1.02);
 }
 
+/* ===== NÚMEROS CON FONDO REDONDEADO (badges tipo "1.", "2.", etc) ===== */
+
+.numero-badge{
+    display: inline-block;
+    color: white;
+    background-color: #0057b8;
+    padding: 2px 9px;
+    border-radius: 50px;
+    font-size: .95em;
+}
+
 /* ===== CARRUSEL DE IMÁGENES ===== */
 
 .carousel{
@@ -466,10 +477,76 @@ nav a.active{
     }
 }
 
-.greenRounded {
-    color: rgb(0, 0, 0); 
-    background-color: green; 
-    padding: 2px 8px; 
-    border-radius: 50px; 
-    display: inline-block;
+/* ===== GATITO SORPRESA ===== */
+
+.gatito-popup{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background:#111827;
+    color:#E2E8F0;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 12px 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    z-index: 99999;
+    cursor: pointer;
+
+    opacity: 0;
+    transform: translateY(20px) scale(.9);
+    pointer-events: none;
+    transition: opacity .4s ease, transform .4s ease;
+}
+
+.gatito-popup.visible{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.gatito-popup pre{
+    margin: 0;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.3;
+    white-space: pre;
+    color: #60A5FA;
+}
+
+@media(max-width:480px){
+    .gatito-popup{
+        right: 10px;
+        bottom: 10px;
+        padding: 10px 14px;
+    }
+    .gatito-popup pre{
+        font-size: 12px;
+    }
+}
+
+.miau-flotante{
+    position: fixed;
+    pointer-events: none;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-size: 15px;
+    z-index: 99998;
+    text-shadow: 0 2px 8px rgba(0,0,0,.6);
+    --miau-rot: 0deg;
+    animation: miauPop 1.8s ease forwards;
+}
+
+@keyframes miauPop{
+    0%{ opacity: 0; transform: translateY(10px) scale(.8) rotate(var(--miau-rot)); }
+    15%{ opacity: 1; transform: translateY(0) scale(1) rotate(var(--miau-rot)); }
+    80%{ opacity: 1; }
+    100%{ opacity: 0; transform: translateY(-15px) scale(.9) rotate(var(--miau-rot)); }
+}
+
+.greenRounded{
+color: rgb(0, 0, 0);
+background-color: green;
+padding: 2px 8px;
+border-radius: 50px;
+display: inline-block;
 }
