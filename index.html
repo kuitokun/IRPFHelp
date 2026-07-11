@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="style.css">
-<link rel="script" href="script.js">
+<script defer src="script.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdn.cursors-4u.net/cursors/animated/cat-paw-curl-f8836eeb-32.css">
@@ -20,7 +20,7 @@
 <body>
     <header>
     <div class="logo">
-        Guía IRPF Uruguay
+        A por el 8%
     </div>
 
     <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">
@@ -30,8 +30,8 @@
     </button>
 
     <nav id="mainNav">
-        <a href="#tabla">Ejemplo comprobante de IRPF</a>
         <a href="#antes">Antes de comenzar</a>
+        <a href="#tabla">Ejemplo comprobante de IRPF</a>
         <a href="#pagina1">Ingreso a DGI</a>
         <a href="#pagina2">Declaración jurada</a>
         <a href="#pagina3">Hoja I</a>
@@ -41,10 +41,37 @@
     </nav>
     </header>
 
+
+    <!-- ========================= -->
+    <!-- HERO -->
+    <!-- ========================= -->
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-content">
+            <h1>
+                A por el 8%
+            </h1>
+            <p style="margin-left: 3%;">
+                <b><u>El objetivo principal de la guia es enseñarle a la población cómo agregar el alquiler a la declaración de IRPF.</u></b><br>
+                De todas formas vamos a recorrer todo el formulario y brindar información sobre todos los puntos que podamos.
+            </p>
+            <p>
+                Si sos un inquilino pagando alquiler podés agregar el monto a tu declaración de IRPF y recibir una devolución del 8% del total anual pagado.
+            </p>
+
+            <p style="color: rgb(211, 64, 64); align-items: center;"><b>ATENCIÓN: La guia está escrita por otro pobre pagador de impuestos, se aceptan recomendaciones y aclaraciones en cuanto a los puntos que hagan falta.<br></b></p>
+        </div>
+
+    </section>
+
+
+
+
     <section id= "tabla" class="table-section">
     <h2 style="color: antiquewhite;">Ejemplo de comprobante de IRPF Anual</h2>
     <p style="color: antiquewhite;">
-        Esta tabla es solo un ejemplo del documento que debería la Empresa&nbsp;proveer, el nombrado en la sección  <a href="#antes">Antes de comenzar</a> , punto b.
+        Esta tabla es solo un ejemplo del documento que debería la Empresa&nbsp;proveer, el nombrado en la sección  <a href="#antes">Antes de comenzar</a> , punto b. <br> Los valores de "Ingresos totales gravados por IRPF" corresponden al salario normal, <b>excluyendo</b> Aguinaldo y Salario Vacacional (ver segunda tabla más abajo).
     </p> 
 
  <div class="table-container" style="transform: scale(0.9);">
@@ -195,36 +222,45 @@
                     <td class="valor-dato" >3.110</td>
                 </tr>
             </tbody>
+        </table>
+    </div>
+    <p style="color: antiquewhite; margin-top: 2%;"  id="tabla2">
+        Esta segunda tabla muestra un ejemplo de <b>Aguinaldo y Salario Vacacional</b> por separado, ya que la DGI los pide como un valor aparte del ingreso&nbsp;(campo&nbsp;4&nbsp;de&nbsp;la&nbsp;<a href="#pagina3">Hoja&nbsp;I&nbsp;-&nbsp;Ingresos&nbsp;dependientes</a>). <br> Los montos corresponden a un sueldo nominal mensual de $60.000, igual al de la tabla anterior.
+    </p>
+
+    <div style="width: 60%; align-self: center; align-items: center; margin-left: 20%;" class="table-container" >
+        <table  class="irpf-table">
+            <thead>
+                <tr>
+                    <th>Concepto</th>
+                    <th>Monto</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr >
+                    <td class="valor-dato">Aguinaldo</td>
+                    <td class="valor-dato" style="color: black; font-size: large;">60.000
+                        <span class="tooltip-texto">Equivale a un sueldo mensual completo, <br> pagado en dos cuotas de 30.000 (junio y diciembre)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="valor-dato">Salario Vacacional</td>
+                    <td class="valor-dato" style="color: black; font-size: large;">48.000
+                        <span class="tooltip-texto">Licencia mínima legal de 20 días: (60.000 / 25) x 20</span>
+                    </td>
+                </tr>
+            </tbody>
 
         </table>
     </div>
+
+    <p style="color: antiquewhite; font-size: .9rem; margin-top: 10px;">
+        <i>Nota: el Salario Vacacional puede variar según tu antigüedad (a partir de los 5 años se suman días extra de licencia) — el monto de arriba es el mínimo legal. Consultá siempre tu recibo real.</i>
+    </p>
     </section>
 
-    <!-- ========================= -->
-    <!-- HERO -->
-    <!-- ========================= -->
 
-    <section id="inicio" class="hero">
-
-        <div class="hero-content">
-
-            <h1>
-                Guía para llenar la declaración de IRPF
-            </h1>
-            <p>
-                El objetivo principal de la guia es enseñarle a la población cómo agregar el alquiler a la declaración de IRPF.
-                De todas formas vamos a recorrer todo el formulario y brindar información sobre todos los puntos que podamos.
-            </p>
-            <p>
-
-                Aprendé cómo completar correctamente la declaración,
-                qué documentos necesitás y cómo presentar la información
-                en la plataforma de DGI.
-
-            </p>
-        </div>
-
-    </section>
 
 
     <!-- ========================= -->
@@ -292,11 +328,24 @@
                 <li><b>2.</b> Una vez estamos adentro, vamos a bajar hasta la sección "<b>Declaraiones</b>", una debe decir "<b>Declaración IRPF - Ejercicio 2025</b>".</li>
 
             </div>
-            </b></b>
+
             <div class="guide-image">
-                <a href="IMGS/1.png" class="glightbox">
-                    <img src="IMGS/1.png" alt="A">
-                </a>
+                <div class="carousel" data-carousel>
+                    <div class="carousel-track">
+                        <a href="IMGS/1.png" class="glightbox" data-gallery="pagina1-gallery">
+                            <img src="IMGS/1.png" alt="Página principal de DGI">
+                        </a>
+                        <a href="IMGS/2.png" class="glightbox" data-gallery="pagina1-gallery">
+                            <img src="IMGS/2.png" alt="Sección Declaraciones, Declaración IRPF - Ejercicio 2025">
+                        </a>
+                    </div>
+                    <button type="button" class="carousel-btn carousel-prev" aria-label="Imagen anterior">‹</button>
+                    <button type="button" class="carousel-btn carousel-next" aria-label="Imagen siguiente">›</button>
+                    <div class="carousel-dots">
+                        <button type="button" class="carousel-dot active" aria-label="Ir a imagen 1"></button>
+                        <button type="button" class="carousel-dot" aria-label="Ir a imagen 2"></button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -315,10 +364,10 @@
 
             <p>Una vez que estés en la sección de <b>Declaración IRPF - Ejercicio 2025</b> vas a ver tu declaración para ese año, con todos los datos, dividida en secciones.</p>
             <p>Luego iremos sección por sección, pero de momento un breve desglose de la información que vas a ver ahí.</p>
-            <li><b>1.</b> Ingresos dependientes: todo lo ganado en el año, sueldo más salario vacacional más aguinaldo.</li>
-            <li><b>2.</b> Deducciones: Aportes jubilatorios, Fonasa, FRL.</li>
-            <li><b>3.</b> Retenciones: Retenciones por IRPF</li>
-            <li><b>4.</b> Crédito por arrendamiento: Lo pagado por alquiler.</li>
+            <li><b class="greenRounded" >1.</b> Ingresos dependientes: todo lo ganado en el año, sueldo más salario vacacional más aguinaldo.</li>
+            <li><b class="greenRounded" >2.</b> Deducciones: Aportes jubilatorios, Fonasa, FRL.</li>
+            <li><b class="greenRounded" >3.</b> Retenciones: Retenciones por IRPF</li>
+            <li><b class="greenRounded" >4.</b> Crédito por arrendamiento: Lo pagado por alquiler.</li>
             </div>
             <div class="guide-image">
 
@@ -340,7 +389,7 @@
 
     <section id="pagina3" class="guide-section">
 
-        <h2>H. I - Ingresos dependientes</h2>
+        <h2>Hoja  I - Ingresos dependientes</h2>
 
         <div class="guide-grid">
 
@@ -349,25 +398,28 @@
                 <p>Los datos de la precarga generalmente están bien, de todas formas debemos controlarlos con el documento que la Empresa&nbsp;nos ha dado. <br>
                      <a href="#tabla">Al inicio de la página se puede encontrar un ejemplo</a>, que es también el que utilizaremos para llenar esta declaración ficticia.</p>
                 <p><i>NOTA. Ten en cuenta que cada número se relaciona con el mismo en la imagen.</i></p>
-                <li><b>1.</b> Empresa&nbsp;1</li>
-                    <li class="list2">Podrás encontrar este valor en nuestra tabla de ejemplo en el mes de **Diciembre**, en la columna **Ingresos totales gravados por IRPF**.</li>
+                <li><b class="greenRounded" >1.</b> Empresa&nbsp;1</li>
+                    <li class="list2">Podrás encontrar este valor en nuestra tabla de ejemplo en el mes de <b>Diciembre</b>, en la columna <b>Ingresos totales gravados por IRPF</b>. <br>En nuestro caso <b><u>el valor sería 720000</u></b></li>
                 </p>
-                <li><b>2.</b> Empresa&nbsp;2</li>
+                <li><b class="greenRounded" >2.</b> Empresa&nbsp;2</li>
                     <li class="list2">Si trabajaste en dos o más empresas deberás agregar los datos de la misma manera. Podrías encontrar Empresa&nbsp;3, Empresa&nbsp;4, Empresa&nbsp;5... y así, si fuera el caso, deberías llenar los datos correspondientes.</li>
                 </p>
-                <li><b>3.</b> Ingresos, excluidos el aguinaldo y salario vacacional.</li>
+                <li><b class="greenRounded" >3.</b> Ingresos, excluidos el aguinaldo y salario vacacional.</li>
                     <li class="list2">Es la suma de los montos colocados arriba, sea una, dos, tres o las empresas que sean.</li>
                 </p>
-                <li><b>4.</b> Empresa&nbsp;1</li>
-                <li class="list2">En nuestro ejemplo, este valor es la suma de Aguinaldo y Salario Vacacional para la Empresa&nbsp;1. X + Y = Z</li>
+                <li><b class="greenRounded" >4.</b> Empresa&nbsp;1</li>
+                <li class="list2">Acá va el total de Aguinaldo y Salario Vacacional de la Empresa&nbsp;1. 
+                    Este dato normalmente NO viene incluido en el mismo total que usaste para el campo 1, 
+                    así que fijate en la <a href="#tabla2">segunda tabla de ejemplo</a> (Aguinaldo y Salario Vacacional) 
+                    y sumá los dos montos (Aguinaldo + Salario Vacacional). En nuestro caso <b><u>el valor&nbsp;sería&nbsp;108000</u></b></li>
                 </p>
-                <li><b>5.</b> Empresa&nbsp;2</li>
+                <li><b class="greenRounded" >5.</b> Empresa&nbsp;2</li>
                     <li class="list2">Si trabajaste en otra empresa, tendrías que ver otro campo para llenar de la misma forma, pero con los datos de Empresa&nbsp;2. Podrías encontrar Empresa&nbsp;3, Empresa&nbsp;4, Empresa&nbsp;5... y así, si fuera el caso, deberías llenar los datos correspondientes.</li>   
                 </p>
-                <li><b>6.</b> Aguinaldo y salario vacacional legales</li>
+                <li><b class="greenRounded" >6.</b> Aguinaldo y salario vacacional legales</li>
                    <li class="list2">Es la suma de los datos que llenaste con anterioridad en 4 y 5 (de ser que hayas trabajado en dos empresas distintas)</li>
                 </p>
-                <li><b>6.</b> Otras</li>
+                <li><b class="greenRounded" >7.</b> Otras</li>
                     <li class="list2">Honestamente, espero no tengas nada que llenar en esta sección porque desconozco.</li>
             </div>
 
@@ -388,44 +440,43 @@
 
     <section id="pagina4" class="guide-section">
 
-        <h2>H. II - Deducciones - Aportes jubilatorios, salud y otros</h2>
+        <h2>Hoja  II - Deducciones - Aportes jubilatorios, salud y otros</h2>
 
         <div class="guide-grid">
 
             <div class="guide-text">
-                <li><b>1.</b> Empresa&nbsp;1</li>
-                    <li class="list2">En este campo va la suma de Aportes jubilatorios, FONASA y FRL para la Empresa&nbsp;1, en nuestro ejemplo sería la suma de los valores bajo estas mismas columnas para el mes de diciembre.</li>
+                <li><b class="greenRounded" >1.</b> Empresa&nbsp;1</li>
+                    <li class="list2">En este campo va la suma de Aportes jubilatorios, FONASA y FRL para la Empresa&nbsp;1, en nuestro ejemplo sería la suma de los valores bajo estas mismas columnas para el mes de diciembre. El FRL se incluye acá junto con FONASA y Aportes Jubilatorios porque son, en definitiva, otros aportes sociales, aunque la etiqueta de la DGI no lo mencione explícitamente. <br>
+                     En nuestro caso <b><u>el valor&nbsp;sería&nbsp;141120</u></b></li></li>
                     <p></p>
-                <li><b>2.</b> Empresa&nbsp;2</li>
-                <li></li>
-                    <li class="list2">En caso de haber trabajado en dos o más empresas en este año fiscal, verá el nombre de las otras empresas listadas bajo la Empresa&nbsp;1. Para cada una deberá seguir el mismo proceso.
-                    <li class="list2"></li></li>
+                <li><b class="greenRounded" >2.</b> Empresa&nbsp;2</li>
+                    <li class="list2">En caso de haber trabajado en dos o más empresas en este año fiscal, verá el nombre de las otras empresas listadas bajo la Empresa&nbsp;1. Para cada una deberá seguir el mismo proceso.</li>
                     <p></p>
-                <li><b>3.</b> Aportes jubilatorios (dependientes e independientes) y FONASA dependientes </li>
+                <li><b class="greenRounded" >3.</b> Aportes jubilatorios (dependientes e independientes) y FONASA dependientes </li>
                     <li class="list2">Es la suma de los montos colocados arriba, sea una, dos, tres o las empresas que sean.</li>
                     
                     <br>
                     <p style="font-size: small; border-radius: 4%; border-color: rgb(0, 0, 0); background-color: rgb(148, 155, 155); color: black; text-align: center;">A mí no me corresponde la sección siguiente, así que desconozco realmente cómo debe ser completada, de todas formas la lógica debe ser la misma, deberías contar documentación que avale los valores totales y actualizar los campos si correspondiera.</p>
                     <br>
-                <li><b>4.</b> Caja notarial </li>
+                <li><b class="greenRounded" >4.</b> Caja notarial </li>
                     <li class="list2">Aportes a la caja notarial</li>
                     <p></p>
-                <li><b>5.</b> CJPPU</li>
+                <li><b class="greenRounded" >5.</b> CJPPU</li>
                     <li class="list2">Aportes a CJPPU</li>
                     <p></p>
-                <li><b>6.</b> Fondo de solidaridad</li>
+                <li><b class="greenRounded" >6.</b> Fondo de solidaridad</li>
                     <li class="list2">Aportes al Fondo de solidaridad</li>
                     <p></p>
-                <li>7- Adicional al Fondo de solidaridad</li>
-                    <li class="list2"> Aporte al Fondo de solidaridad<</li>
+                <li><b class="greenRounded" >7.</b> Adicional al Fondo de solidaridad</li>
+                    <li class="list2">Aporte al Fondo de solidaridad</li>
                     <p></p>
-                <li><b>8.</b> Aportes reintegrados por AFAP</li>
+                <li><b class="greenRounded" >8.</b> Aportes reintegrados por AFAP</li>
                     <li class="list2">Si recibiste un reintegro por este concepto, deberías colocarlo acá.</li>
                     <p></p>
-                <li><b>9.</b> Importes reintegrados por FONASA</li>
+                <li><b class="greenRounded" >9.</b> Importes reintegrados por FONASA</li>
                     <li class="list2">Existe una devolución de FONASA, si recibiste una en este año fiscal debe ser agregada acá, de todas formas al ser una precarga, deberías poder ver el monto.</li>
                     <p></p>
-                <li><b>10.</b> Imputación deducciones por desafiliación AFAP</li>
+                <li><b class="greenRounded" >10.</b> Imputación deducciones por desafiliación AFAP</li>
                     <li class="list2">Sobre esta sección también desconozco. No puedo asistir en este punto</li>
             </div>
 
@@ -446,7 +497,7 @@
 
     <section id="pagina5" class="guide-section">
 
-        <h2>H. III - Retenciones - Descuentos por IRPF</h2>
+        <h2>Hoja  III - Retenciones - Descuentos por IRPF</h2>
 
         <div class="guide-grid">
 
@@ -455,23 +506,24 @@
                     En nuestra tabla de ejemplo sería la última columna.
                 </p>
                 
-                <li><b>1.</b> Empresa 1</li>
-                <li class="list2">Monto total de robo por parte del Estado, en nuestro ejemplo se encuentra en la columna ´Retenciones IRPF´ fila diciembre. Ese monto debería ser el monto total de la retenciones de IRPF para la Empresa 1.</li>
+                <li><b class="greenRounded" >1.</b> Empresa 1</li>
+                <li class="list2">Monto total de descuento por parte del Estado, en nuestro ejemplo se encuentra en la columna ´Retenciones IRPF´ fila diciembre. Ese monto debería ser el monto total de la retenciones de IRPF para la Empresa 1. <br>
+                En nuestro caso <b><u>el valor&nbsp;sería&nbsp;3110</u></b></li></li></li>
                 <p></p>
 
-                <li><b>2.</b> Empresa 2</li>
+                <li><b class="greenRounded" >2.</b> Empresa 2</li>
                 <li class="list2">Si hubiese trabajado en más de una empresa en este año fiscal, deberías revisar el mismo campo en el documento que debería haber entregado esta otra empresa. Dos, tres, cuatro o las que sean.</li>
                 <p></p>
 
-                <li><b>3.</b> Por rentas de trabajo dependiente</li>
+                <li><b class="greenRounded" >3.</b> Por rentas de trabajo dependiente</li>
                 <li class="list2">Es el total, es la suma de los montos colocados arriba, sea una, dos, tres o las empresas que sean.</li>
                 <p></p>
 
-                <li><b>4.</b> Retenciones por AFAP</li>
+                <li><b class="greenRounded" >4.</b> Retenciones por AFAP</li>
                 <li class="list2">Desconozco las circunstancias por las cuales podrías percibir una retención por AFAP, pero debería figurar en este campo.</li>
                 <p></p>
 
-                <li><b>5.</b> Retenciones por FONASA</li>
+                <li><b class="greenRounded" >5.</b> Retenciones por FONASA</li>
                 <li class="list2">Si recibiste una devolución de FONASA en este año fiscal habrás visto que sobre el monto que te devuelven te hacen descuentos, ese monto que vuelve al Estado figura acá.</li>
 
             </div>
@@ -493,11 +545,7 @@
 
     <section id="pagina6" class="guide-section">
 
-        <h2>H. IV - Arrendamineto</h2>
-
-        <div class="guide-grid">
-
-            <div class="guide-text">
+        <h2>Hoja  IV - Arrendamineto</h2>
 <p>Esta es la parte en la que se llenan los datos sobre el alquiler pagado en el último año fiscal.</p>
 <h3><u>Atención a los siguientes puntos</u></h3>
 
@@ -508,48 +556,50 @@
 <li><b>c.</b> El total del alquiler, si no lo pueden conseguir de las inmobiliarias o aseguradoras debe ser calculado por ustedes. <br>
 Generalmente el alquiler se mantiene durante el año, así que sería un mes por doce.</li>
 <br><br>
+        <div class="guide-grid">
 
-<b><u>**Datos inmueble 1**</u></b>
-<li><b>1.</b> Departamento </b></li>
+            <div class="guide-text">
+
+
+<b><u>Datos inmueble 1</u></b>
+<li><b class="greenRounded" >1.</b> Departamento</li>
 <li class="list2">Departamento en el cual se encuentra la propiedad</li>
 <p></p>
-<li><b>2.</b> Localidad:</b></li>
+<li><b class="greenRounded" >2.</b> Localidad:</li>
 <li class="list2">Localidad en la cual se encuentra la propiedad.</li>
 <p></p>
-<li><b>3.</b> Padrón:</b></li>
+<li><b class="greenRounded" >3.</b> Padrón:</li>
 <li class="list2">de la propiedad, puede encontrarse en el recibo de ´Tributos domiciliarios´, o cualquier recibo de UTE.</li>
 <p></p>
-<li><b>4.</b> Urbano/Rural</b></li>
+<li><b class="greenRounded" >4.</b> Urbano/Rural</li>
 <p></p>
-<li><b>5.</b> Block</b></li>
+<li><b class="greenRounded" >5.</b> Block</li>
 <li class="list2">El número de la casa</li>
 <p></p>
-<li><b>6.</b> E/S: </b></li>
+<li><b class="greenRounded" >6.</b> E/S: </li>
 <li class="list2">Entrepiso o Subsuelo. Si no es ninguno de los dos, mantener vacío.</li>
 <p></p>
-<li><b>7.</b> Unidad:</b></li>
+<li><b class="greenRounded" >7.</b> Unidad:</li>
 <li class="list2">Si es un apartamento o complejo de vivienda, el número de esta.</li>
 <p></p>
-<li><b>8.</b> Arrendamiento pagado:</li>
+<li><b class="greenRounded" >8.</b> Arrendamiento pagado:</li>
 <li class="list2"> El total del arrendamiento pagado. Si se pagaron $24.000 por mes, por ejemplo, 24.000 x 12 = 288000.</li>
 
 <br><br>
- <b><u>**Identificación del arrendador**</u></b>
+ <b><u>Identificación del arrendador</u></b>
  <p>Estos son los datos de quien nos alquila la propiedad, del dueño. Se pueden encontrar en el contrato de alquiler o en el resumen provisto por por la aseguradora/inmobiliaria.</p>
 
-<li><b>1.</b> Nombre o denominación</li>
+<li><b class="greenRounded" >1.</b> Nombre o denominación</li>
 <li class="list2">Nombre completo si es posible de quien nos alquila</li>
-<li><b>2.</b> Documento: </li>
+<li><b class="greenRounded" >2.</b> Documento: </li>
 <li class="list2">Cédula generalmente</li>
-<li><b>3.</b> Domicilio: </li>
+<li><b class="greenRounded" >3.</b> Domicilio: </li>
 <li class="list2">Domicilio de quien nos alquila</li>
-<li><b>4.</b> Departamento:</li><li class="list2">Del domicilio de quien nos alquila</li>
-<li><b>5.</b> Localidad:</li><li class="list2">Del domicilio de quien nos alquila</li>
+<li><b class="greenRounded" >4.</b> Departamento:</li><li class="list2">Del domicilio de quien nos alquila</li>
+<li><b class="greenRounded" >5.</b> Localidad:</li><li class="list2">Del domicilio de quien nos alquila</li>
 <p></p>
 <p>Si hay que llenar más de un inmueble, porque se han mudado en ese año, se puede agregar haciendo click en agregar otro inmueble.
 Los campos se llenan de la misma manera, pero para esa propiedad.</p>
-
-
             </div>
 
             <div class="guide-image">
@@ -584,20 +634,17 @@ Los campos se llenan de la misma manera, pero para esa propiedad.</p>
 
         <div class="links">
 
-            <a href="#">
+            <a href="https://servicios.dgi.gub.uy/serviciosenlinea">
                 Portal de Servicios DGI
             </a>
-        </p>
             <a href="#">
                 Presentar Declaración
             </a>
-        </p>
             <a href="#">
                 Consulta de Devoluciones
             </a>
-        </p>
-            <a href="#">
-                Resolución 662/007
+            <a href="https://www.impo.com.uy/bases/resoluciones-dgi-interes-general/662-2007">
+                Resolución 663/007
             </a>
 
         </div>
