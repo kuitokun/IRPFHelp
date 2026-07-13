@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aviso legal y exención de responsabilidad — A por el 8%</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script defer src="script.js"></script>
 <link rel="stylesheet" href="https://cdn.cursors-4u.net/cursors/animated/cat-paw-curl-f8836eeb-32.css">
@@ -12,16 +15,18 @@
 <link rel="apple-touch-icon" href="icnonsandlogos/favicon_white.png">
 <style>
     .legal-section h2{
-        color:#60A5FA;
+        color: var(--stamp);
         margin-top:0;
+        font-size: 1.9rem;
     }
     .legal-section h3{
-        color:#93C5FD;
+        color: var(--pine);
         margin-top:28px;
+        font-size: 1.15rem;
     }
     .legal-section p, .legal-section li{
         text-align:justify;
-        color:#CBD5E1;
+        color: var(--text-muted);
     }
     .legal-section li{
         list-style-type: disc;
@@ -32,15 +37,19 @@
         max-width:900px;
     }
     .fecha-actualizacion{
-        color:#94A3B8;
+        color: var(--text-faint);
         font-size:.9rem;
         margin-top:40px;
-        border-top:1px solid #374151;
+        border-top:1px solid var(--border);
         padding-top:16px;
     }
     .volver-link{
         display:inline-block;
         margin-bottom:20px;
+        font-family: var(--font-mono);
+        font-size: .85rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 </style>
 </head>
@@ -150,13 +159,11 @@
     </section>
 
     <footer>
-        <div style="margin-left: 10%;">
-            <p style="text-align: justify; margin-right: 10%;">
-                Esta guía es de carácter informativo y no sustituye la normativa
-                vigente ni la documentación oficial publicada por la DGI. Ver
-                <a href="disclaimer.html">aviso legal completo</a>.
-            </p>
-        </div>
+        <p>
+            Esta guía es de carácter informativo y no sustituye la normativa
+            vigente ni la documentación oficial publicada por la DGI. Ver
+            <a href="disclaimer.html">aviso legal completo</a>.
+        </p>
     </footer>
 
 </body>

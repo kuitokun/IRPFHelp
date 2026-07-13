@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script defer src="script.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
@@ -59,7 +62,7 @@
             <h1>
                 A por el 8%
             </h1>
-            <p style="margin-left: 3%;">
+            <p>
                 <b><u>El objetivo principal de la guia es enseñarle a la población cómo agregar el alquiler a la declaración de IRPF.</u></b><br>
                 De todas formas vamos a recorrer todo el formulario y brindar información sobre todos los puntos que podamos.
             </p>
@@ -67,7 +70,7 @@
                 Si sos un inquilino pagando alquiler podés agregar el monto a tu declaración de IRPF y recibir una devolución del 8% del total anual pagado.
             </p>
 
-            <p style="color: rgb(211, 64, 64); align-items: center;"><b>ATENCIÓN: La guia está escrita por otro pobre pagador de impuestos, se aceptan recomendaciones y aclaraciones en cuanto a los puntos que hagan falta.<br></b></p>
+            <p class="callout callout-warning"><b>ATENCIÓN:</b> la guía está escrita por otro pobre pagador de impuestos, se aceptan recomendaciones y aclaraciones en cuanto a los puntos que hagan falta.</p>
         </div>
 
     </section>
@@ -76,12 +79,12 @@
 
 
     <section id= "tabla" class="table-section">
-    <h2 style="color: antiquewhite;">Ejemplo de comprobante de IRPF Anual</h2>
-    <p style="color: antiquewhite;">
+    <h2>Ejemplo de comprobante de IRPF Anual</h2>
+    <p>
         Esta tabla es solo un ejemplo del documento que debería la Empresa&nbsp;proveer, el nombrado en la sección  <a href="#antes">Antes de comenzar</a> , punto b. <br> Los valores de "Ingresos totales gravados por IRPF" corresponden al salario normal, <b>excluyendo</b> Aguinaldo y Salario Vacacional (ver segunda tabla más abajo).
     </p> 
 
- <div class="table-container" style="transform: scale(0.9);">
+ <div class="table-container">
         <table class="irpf-table">
 
             <thead>
@@ -110,7 +113,7 @@
 
                 <tr>
                     <td class="valor-dato" >Febrero</td>
-                    <td class="valor-dato" style="color: black; font-size: large;">120.000
+                    <td class="valor-dato">120.000
                         <span class="tooltip-texto">El pago de este mes sumado al mes anterior.</span>
                     </td>
                     <td class="valor-dato" >18.000</td>
@@ -121,7 +124,7 @@
 
                 <tr>
                     <td class="valor-dato" >Marzo</td>
-                    <td class="valor-dato" style="color: black; font-size: large;">180.000
+                    <td class="valor-dato">180.000
                         <span class="tooltip-texto">El pago de este mes sumado a los meses anteriores.</span>
                     </td>
                     <td class="valor-dato" >27.000</td>
@@ -132,7 +135,7 @@
 
                 <tr>
                     <td class="valor-dato" >Abril</td>
-                    <td class="valor-dato" style="color: black; font-size: large;">240.000
+                    <td class="valor-dato">240.000
                         <span class="tooltip-texto">El pago de este mes sumado a los meses anteriores.</span>
                     </td>
                     <td class="valor-dato" >36.000</td>
@@ -143,7 +146,7 @@
 
                 <tr>
                     <td class="valor-dato" >Mayo</td>
-                    <td class="valor-dato" style="color: black; font-size: large;">300.000
+                    <td class="valor-dato">300.000
                         <span class="tooltip-texto">El pago de este mes sumado a los meses anteriores.</span>
                     </td>
                     <td class="valor-dato" >45.000</td>
@@ -154,7 +157,7 @@
 
                 <tr>
                     <td class="valor-dato" >Junio</td>
-                    <td class="valor-dato" style="color: black; font-size: large;">360.000
+                    <td class="valor-dato">360.000
                         <span class="tooltip-texto">El pago de este mes sumado a los meses anteriores.</span>
                     </td>
                     <td class="valor-dato" >54.000</td>
@@ -165,7 +168,7 @@
 
                 <tr>
                     <td class="valor-dato" >Julio</td>
-                    <td class="valor-dato" style="color: black; font-size: large;">420.000
+                    <td class="valor-dato">420.000
                         <span class="tooltip-texto">El pago de este mes sumado a los meses anteriores.</span>
                     </td>
                     <td class="valor-dato" >63.000</td>
@@ -176,7 +179,7 @@
 
                 <tr>
                     <td class="valor-dato" >Agosto</td>
-                    <td class="valor-dato" style="color: black; font-size: large;">480.000
+                    <td class="valor-dato">480.000
                         <span class="tooltip-texto">El pago de este mes sumado a los meses anteriores.</span>
                     </td>
                     <td class="valor-dato" >72.000</td>
@@ -187,7 +190,7 @@
 
                 <tr>
                     <td class="valor-dato" >Septiembre</td>
-                    <td class="valor-dato" style="color: black; font-size: large;">540.000
+                    <td class="valor-dato">540.000
                         <span class="tooltip-texto">El pago de este mes sumado a los meses anteriores.</span>
                     </td>
                     <td class="valor-dato" >81.000</td>
@@ -198,7 +201,7 @@
 
                 <tr>
                     <td class="valor-dato" >Octubre</td>
-                    <td class="valor-dato" style="color: black; font-size: large;">600.000
+                    <td class="valor-dato">600.000
                         <span class="tooltip-texto">El pago de este mes sumado a los meses anteriores.</span>
                     </td>
                     <td class="valor-dato" >90.000</td>
@@ -209,7 +212,7 @@
 
                 <tr>
                     <td class="valor-dato" >Noviembre</td>
-                    <td class="valor-dato" style="color: black; font-size: large;">660.000
+                    <td class="valor-dato">660.000
                         <span class="tooltip-texto">El pago de este mes sumado a los meses anteriores.</span>
                     </td>
                     <td class="valor-dato" >99.000</td>
@@ -220,7 +223,7 @@
 
                 <tr>
                     <td class="valor-dato" >Diciembre</td>
-                    <td class="valor-dato" style="color: black; font-size: large;">720.000
+                    <td class="valor-dato">720.000
                         <span class="tooltip-texto">El pago de este mes sumado a los meses anteriores.</span>
                     </td>
                     <td class="valor-dato" >108.000</td>
@@ -231,11 +234,11 @@
             </tbody>
         </table>
     </div>
-    <p style="color: antiquewhite; margin-top: 2%;"  id="tabla2">
+    <p id="tabla2">
         Esta segunda tabla muestra un ejemplo de <b>Aguinaldo y Salario Vacacional</b> por separado, ya que la DGI los pide como un valor aparte del ingreso&nbsp;(campo&nbsp;4&nbsp;de&nbsp;la&nbsp;<a href="#pagina3">Hoja&nbsp;I&nbsp;-&nbsp;Ingresos&nbsp;dependientes</a>). <br> Los montos corresponden a un sueldo nominal mensual de $60.000, igual al de la tabla anterior.
     </p>
 
-    <div style="width: 60%;margin-left: 20%; " class="table-container" >
+    <div class="table-container tabla-secundaria">
         <table  class="irpf-table">
             <thead>
                 <tr>
@@ -247,13 +250,13 @@
             <tbody>
                 <tr >
                     <td class="valor-dato">Aguinaldo</td>
-                    <td class="valor-dato" style="color: black; font-size: large;">60.000
+                    <td class="valor-dato">60.000
                         <span class="tooltip-texto">Equivale a un sueldo mensual completo, <br> pagado en dos cuotas de 30.000 (junio y diciembre)</span>
                     </td>
                 </tr>
                 <tr>
                     <td class="valor-dato">Salario Vacacional</td>
-                    <td class="valor-dato" style="color: black; font-size: large;">48.000
+                    <td class="valor-dato">48.000
                         <span class="tooltip-texto">Licencia mínima legal de 20 días: (60.000 / 25) x 20</span>
                     </td>
                 </tr>
@@ -262,7 +265,7 @@
         </table>
     </div>
 
-    <p style="color: antiquewhite; font-size: .9rem; margin-top: 10px;">
+    <p class="callout callout-note">
         <i>Nota: el Salario Vacacional puede variar según tu antigüedad (a partir de los 5 años se suman días extra de licencia) — el monto de arriba es el mínimo legal. Consultá siempre tu recibo real.</i>
     </p>
     </section>
@@ -459,7 +462,7 @@
                     <li class="list2">Es la suma de los montos colocados arriba, sea una, dos, tres o las empresas que sean.</li>
                     
                     <br>
-                    <p style="font-size: small; border-radius: 4%; border-color: rgb(0, 0, 0); background-color: rgb(148, 155, 155); color: black; text-align: center;">A mí no me corresponde la sección siguiente, así que desconozco realmente cómo debe ser completada, de todas formas la lógica debe ser la misma, deberías contar documentación que avale los valores totales y actualizar los campos si correspondiera.</p>
+                    <p class="callout callout-neutral">A mí no me corresponde la sección siguiente, así que desconozco realmente cómo debe ser completada, de todas formas la lógica debe ser la misma, deberías contar documentación que avale los valores totales y actualizar los campos si correspondiera.</p>
                     <br>
                 <li><b class="greenRounded" >4.</b> Caja notarial </li>
                     <li class="list2">Aportes a la caja notarial</li>
@@ -657,13 +660,11 @@ Los campos se llenan de la misma manera, pero para esa propiedad.</p>
     <!-- ========================= -->
 
     <footer>
-        <div style="margin-left: 10%;">
-            <p style="text-align: justify; margin-right: 10%;">
-                Esta guía es de carácter informativo y no sustituye la normativa
-                vigente ni la documentación oficial publicada por la DGI. Ver
-                <a href="disclaimer.html">aviso legal completo</a>.
-            </p>
-        </div> 
+        <p>
+            Esta guía es de carácter informativo y no sustituye la normativa
+            vigente ni la documentación oficial publicada por la DGI. Ver
+            <a href="disclaimer.html">aviso legal completo</a>.
+        </p>
     </footer>
 
 
