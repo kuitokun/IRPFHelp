@@ -1,9 +1,25 @@
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     margin:0;
     font-family: "Segoe UI", Arial, sans-serif;
     background:#0F172A;
     color:#E2E8F0;
     line-height:1.7;
+}
+
+/* Como el header es sticky, sin esto los anchors quedan tapados
+   por el header al hacer scroll hacia ellos */
+section[id]{
+    scroll-margin-top: 90px;
+}
+
+@media(prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior:auto;
+    }
 }
 
 li{
