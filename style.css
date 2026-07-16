@@ -477,6 +477,10 @@ nav a.active{
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-receipt);
     overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-4);
 }
 
 .hero::after{
@@ -512,6 +516,62 @@ nav a.active{
 .hero-content p b u{
     color: var(--text);
     text-decoration-color: var(--stamp);
+}
+
+/* ===== HERO SHORTCUTS ===== */
+
+.hero-shortcuts{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 0 0 260px;
+    max-width: 260px;
+    padding-top: 4px;
+}
+
+.hero-shortcut{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 18px 20px;
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color .15s ease, background .15s ease, transform .15s ease;
+}
+
+.hero-shortcut:hover{
+    border-color: var(--stamp);
+    background: var(--panel);
+    transform: translateY(-2px);
+}
+
+.hero-shortcut-label{
+    font-family: var(--font-mono);
+    font-size: .74rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--text-faint);
+}
+
+.hero-shortcut-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.hero-shortcut-title::after{
+    content: "→";
+    flex-shrink: 0;
+    color: var(--stamp);
+    font-family: var(--font-mono);
 }
 
 /* ===== GUIDE GRID ===== */
@@ -652,15 +712,59 @@ footer{
     color: var(--text-faint);
     font-size: .88rem;
     border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
 }
 
 footer p{
     margin: 0;
     text-align: left;
+    flex: 1 1 320px;
 }
 
 footer a{
     color: var(--pine);
+}
+
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    flex: 0 0 auto;
+}
+
+.footer-contact-label{
+    font-family: var(--font-mono);
+    font-size: .74rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--text-faint);
+}
+
+.footer-contact-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--pine);
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.footer-contact-link svg{
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--pine);
+}
+
+.footer-contact-link:hover,
+.footer-contact-link:hover svg{
+    color: var(--stamp);
 }
 
 /* ===== RESPONSIVE GENERAL ===== */
@@ -713,6 +817,18 @@ footer a{
     .hero{
         margin: var(--space-3) auto;
         padding: 40px 26px 34px;
+        flex-direction: column;
+    }
+
+    .hero-shortcuts{
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-shortcut{
+        flex: 1 1 220px;
     }
 
     section .guide-grid{
@@ -768,6 +884,14 @@ footer a{
 
     .hero-content h1{
         font-size: 2.1rem;
+    }
+
+    .hero-shortcuts{
+        flex-direction: column;
+    }
+
+    .hero-shortcut{
+        flex: 1 1 auto;
     }
 }
 
